@@ -7,7 +7,7 @@ import { validateBody } from "../../decorators/index.js";
 import {
   userSignupSchema,
   userSigninSchema,
-  // updateAvatarUserSchema,
+  userEmailSchema,
 } from "../../models/User.js";
 
 import authController from "../../controllers/auth-controller.js";
@@ -21,6 +21,14 @@ authRouter.post(
   upload.single("avatar"),
   validateBody(userSignupSchema),
   authController.signup
+);
+
+authRouter.get("/verify/:verificationCode", authController.verify);
+
+authRouter.post(
+  "/users/verify",
+  validateBody(userEmailSchema),
+  authController.resendVerifyEmail
 );
 
 authRouter.post(
