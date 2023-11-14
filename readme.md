@@ -32,4 +32,4 @@
 - `npm run lint` &mdash; запустити виконання перевірки коду з eslint, необхідно виконувати перед кожним PR та виправляти всі помилки лінтера
 - `npm lint:fix` &mdash; та ж перевірка лінтера, але з автоматичними виправленнями простих помилок
 
-https://nodejs-hw-rest-api-rj2u.onrender.com
+https://nodejs-hw-rest-api-rj2u.onrender.com, деплой происходит с ветки hw05-avatars
